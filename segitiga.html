@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Luas Segitiga</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap5/css/bootstrap.css">
+        <script type="text/javascript" src="bootstrap5/js/jquery.js"></script>
+        <script type="text/javascript" src="bootstrap5/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="text-center" style="margin-top: 20px">
+
+            </div>
+            <br/>
+            <h5 class="text-center">Hitung Luas Segitiga</h5>
+            <form class="form-horizontal">
+                <div class="form-group" style="margin-top: 10px">
+                    <label class="control-label col-sm-2" for="alas">Alas Segitiga:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="alas">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 10px">
+                    <label class="control-label col-sm-2" for="tinggi">Tinggi Segitiga:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="tinggi">
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 10px">
+                    <label class="control-label col-sm-2" for="luas">Luas:</label>
+                    <div class="col-sm-10">
+                        <input type="number" disabled class="form-control" id="luas">
+                    </div>
+                </div>
+                <br/>
+                <button type="button" class="btn btn-primary" onClick="hitungluas()">Hitung</button>
+                <script type="text/javascript">
+                    function hitungluas(){
+                        alas=document.getElementById("alas").value;
+                        tinggi=document.getElementById("tinggi").value;
+                        luas=(alas*tinggi)*0.5;
+                        document.getElementById("luas").value=luas;
+                    }
+                </script>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </form>
+        </div>
+    </body>
+</html>
